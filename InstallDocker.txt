@@ -1,0 +1,17 @@
+##Install Docker
+1.sudo yum update
+2.vi /etc/yum.repos.d/docker.repo
+
+[docker-repo]
+name=Docker Repo
+baseurl=https://yum.dockerproject.org/repo/main/centos/7
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+
+3.sudo yum -y install docker-engine
+4.sudo usermod -aG docker ec2-user
+4.systemctl start docker
+5.systemctl enable docker
+6.systemctl status docker
+7.systemctl reboot docker
